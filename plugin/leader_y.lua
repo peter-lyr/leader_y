@@ -5,6 +5,8 @@ require 'which-key'.register {
   ['<leader>yf'] = { name = 'yank.file', },
   ['<leader>yr'] = { name = 'yank.file.relative', },
   ['<leader>yw'] = { name = 'yank.cwd', },
+  ['<leader>yi'] = { name = 'yank.in', },
+  ['<leader>ya'] = { name = 'yank.around', },
 
   ['<leader>yff'] = { function() F.yank_clipbaord_file_full() end, 'yank_clipbaord_file_full', mode = { 'n', 'v', }, },
   ['<leader>yfh'] = { function() F.yank_clipbaord_file_full_head() end, 'yank_clipbaord_file_full_head', mode = { 'n', 'v', }, },
@@ -17,4 +19,7 @@ require 'which-key'.register {
   ['<leader>ywf'] = { function() F.yank_clipbaord_cwd() end, 'yank_clipbaord_cwd', mode = { 'n', 'v', }, },
   ['<leader>ywt'] = { function() F.yank_clipbaord_cwd_tail() end, 'yank_clipbaord_cwd_tail', mode = { 'n', 'v', }, },
   ['<leader>ywh'] = { function() F.yank_clipbaord_cwd_head() end, 'yank_clipbaord_cwd_head', mode = { 'n', 'v', }, },
+
+  ['<leader>yip'] = { function() F.yank_clipbaord(F.get_paragraph()) end, 'yank_clipbaord_paragraph', mode = { 'n', 'v', }, },
+  ['<leader>yap'] = { function() F.yank_clipbaord(F.get_paragraph()) end, 'yank_clipbaord_paragraph', mode = { 'n', 'v', }, },
 }
