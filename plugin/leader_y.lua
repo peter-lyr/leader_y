@@ -10,6 +10,7 @@ require 'which-key'.register {
 
   ['<leader>yc'] = { function() F.system_copy { F.get_cur_file(), } end, 'system_copy cur_file', mode = { 'n', 'v', }, },
   ['<leader>yp'] = { function() F.system_paste(F.get_cur_file()) end, 'system_paste cur_dir', mode = { 'n', 'v', }, },
+  ['<leader>yd'] = { function() F.copy_to_desktop() end, 'copy_to_desktop cur_file', mode = { 'n', 'v', }, },
 
   ['<leader>yff'] = { function() F.yank_clipbaord_file_full() end, 'yank_clipbaord_file_full', mode = { 'n', 'v', }, },
   ['<leader>yfh'] = { function() F.yank_clipbaord_file_full_head() end, 'yank_clipbaord_file_full_head', mode = { 'n', 'v', }, },
